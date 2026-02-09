@@ -29,6 +29,7 @@ const Contact = () => {
             setSubmitted(false);
         }, 3000);
     };
+    
 
     return (
         <section id="contact" className="contact section">
