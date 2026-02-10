@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Contact.css';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -19,100 +18,125 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you would typically send the data to a backend
         console.log('Form submitted:', formData);
         setSubmitted(true);
 
-        // Reset form after 3 seconds
         setTimeout(() => {
             setFormData({ name: '', email: '', message: '' });
             setSubmitted(false);
         }, 3000);
     };
-    
 
     return (
-        <section id="contact" className="contact section">
-            <div className="container">
-                <div className="contact-content">
-                    <div className="contact-info animate-fade-in-up">
-                        <h2>Let's Build Something Together</h2>
-                        <p className="contact-description">
-                            Have an idea or need a reliable development partner? Reach out to us and let's discuss the right solution for your business.
-                        </p>
+        <section id="contact" className="py-24 bg-white relative overflow-hidden">
+            {/* Background pattern */}
+            <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1kYXNoYXJyYXk9IjEwIDEwIi8+PC9zdmc+')]"></div>
 
-                        <div className="contact-details">
-                            <div className="contact-detail-item">
-                                <div className="contact-icon">📧</div>
-                                <div>
-                                    <h4>Email</h4>
-                                    <p>contact@SVPfarm's.com</p>
+            <div className="container mx-auto px-4 md:px-6 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-16 items-start">
+                    <div className="space-y-10 animate-fade-in-up">
+                        <div className="space-y-6">
+                            <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+                                Let's Build Something <br />
+                                <span className="text-primary-600 italic">Extraordinary</span>
+                            </h2>
+                            <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
+                                Have an idea or need a reliable development partner? Reach out to us and let's discuss the right solution for your business.
+                            </p>
+                        </div>
+
+                        <div className="space-y-8">
+                            <div className="flex items-center gap-6 group">
+                                <div className="w-14 h-14 bg-primary-50 rounded-2xl flex items-center justify-center text-2xl text-primary-600 group-hover:bg-primary-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                                    📧
+                                </div>
+                                <div className="space-y-1">
+                                    <h4 className="text-sm font-bold uppercase tracking-widest text-gray-400">Email Us</h4>
+                                    <p className="text-lg font-black text-gray-900">contact@SVPfarm's.com</p>
                                 </div>
                             </div>
 
-                            <div className="contact-detail-item">
-                                <div className="contact-icon">📱</div>
-                                <div>
-                                    <h4>Phone</h4>
-                                    <p>+1 (555) 123-4567</p>
+                            <div className="flex items-center gap-6 group">
+                                <div className="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center text-2xl text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                                    📱
+                                </div>
+                                <div className="space-y-1">
+                                    <h4 className="text-sm font-bold uppercase tracking-widest text-gray-400">Call Us</h4>
+                                    <p className="text-lg font-black text-gray-900">+1 (555) 123-4567</p>
                                 </div>
                             </div>
 
-                            <div className="contact-detail-item">
-                                <div className="contact-icon">📍</div>
-                                <div>
-                                    <h4>Location</h4>
-                                    <p>Your City, Country</p>
+                            <div className="flex items-center gap-6 group">
+                                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-2xl text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                                    📍
+                                </div>
+                                <div className="space-y-1">
+                                    <h4 className="text-sm font-bold uppercase tracking-widest text-gray-400">Visit Us</h4>
+                                    <p className="text-lg font-black text-gray-900">Your Tech Hub, Innovation City</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="contact-form-wrapper animate-fade-in">
-                        <form className="contact-form glass" onSubmit={handleSubmit}>
-                            <div className="form-group">
-                                <label htmlFor="name">Your Name</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    required
-                                    placeholder="John Doe"
-                                />
-                            </div>
+                    <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                        <div className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] border border-gray-100 ring-1 ring-black/5 backdrop-blur-sm relative">
+                            {submitted && (
+                                <div className="absolute inset-0 bg-white/90 backdrop-blur-md z-20 flex flex-col items-center justify-center text-center p-8 rounded-[2.5rem] animate-fade-in">
+                                    <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-4xl mb-6 shadow-sm">✓</div>
+                                    <h3 className="text-3xl font-bold text-gray-900 mb-2">Message Sent!</h3>
+                                    <p className="text-gray-600 italic">We'll get back to you within 24 hours.</p>
+                                </div>
+                            )}
 
-                            <div className="form-group">
-                                <label htmlFor="email">Your Email</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    required
-                                    placeholder="john@example.com"
-                                />
-                            </div>
+                            <form className="space-y-6" onSubmit={handleSubmit}>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-bold text-gray-700 ml-1">Your Name</label>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-6 py-4 bg-gray-50 border-transparent rounded-2xl focus:bg-white focus:ring-4 focus:ring-primary-100 transition-all duration-300 font-medium outline-none border border-gray-100"
+                                        placeholder="Enter your name"
+                                    />
+                                </div>
 
-                            <div className="form-group">
-                                <label htmlFor="message">Your Message</label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    value={formData.message}
-                                    onChange={handleChange}
-                                    required
-                                    rows="5"
-                                    placeholder="Tell us about your project..."
-                                ></textarea>
-                            </div>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-bold text-gray-700 ml-1">Your Email</label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-6 py-4 bg-gray-50 border-transparent rounded-2xl focus:bg-white focus:ring-4 focus:ring-primary-100 transition-all duration-300 font-medium outline-none border border-gray-100"
+                                        placeholder="john@example.com"
+                                    />
+                                </div>
 
-                            <button type="submit" className="btn btn-primary btn-submit">
-                                {submitted ? '✓ Message Sent!' : 'Send Message'}
-                            </button>
-                        </form>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-bold text-gray-700 ml-1">Your Message</label>
+                                    <textarea
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        required
+                                        rows="4"
+                                        className="w-full px-6 py-4 bg-gray-50 border-transparent rounded-2xl focus:bg-white focus:ring-4 focus:ring-primary-100 transition-all duration-300 font-medium outline-none border border-gray-100 resize-none"
+                                        placeholder="Tell us about your project..."
+                                    ></textarea>
+                                </div>
+
+                                <button type="submit" className="w-full py-5 bg-primary-600 text-white font-black rounded-2xl hover:bg-primary-700 transition-all duration-300 shadow-xl shadow-primary-200 hover:shadow-none transform hover:translate-y-0.5 mt-4">
+                                    Submit Request
+                                </button>
+
+                                <p className="text-xs text-center text-gray-400 font-medium">
+                                    * We usually respond within 2-4 business hours.
+                                </p>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
