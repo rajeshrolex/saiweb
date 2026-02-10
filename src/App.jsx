@@ -10,6 +10,7 @@ import HowWeWork from './components/HowWeWork';
 import WhyChooseUs from './components/WhyChooseUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 // Home page component
@@ -29,6 +30,7 @@ const HomePage = () => (
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-gray-50">
         <Navbar />
         <Routes>
