@@ -42,8 +42,15 @@ const Navbar = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
                 <div className="flex items-center justify-between h-full relative">
                     {/* Logo on the left */}
-                    <Link to="/" className="text-2xl font-black text-primary-600 tracking-tight whitespace-nowrap z-10">
-                        SVPfarm's
+                    <Link to="/" className="flex items-center group z-10">
+                        <img
+                            src="/logo.png"
+                            alt="SVP FARM TECH"
+                            className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                            onError={(e) => {
+                                e.target.src = '/logo.svg'; // Fallback to SVG if PNG is missing
+                            }}
+                        />
                     </Link>
 
                     {/* Centered Desktop Navigation */}
