@@ -33,7 +33,7 @@ const ServicesOverview = () => {
             color: 'from-orange-500 to-amber-600'
         },
         {
-            image: 'https://images.unsplash.com/photo-1454165833767-027ff33027ef?w=500&q=80',
+            image: '/ui ux.jpg',
             title: 'UI/UX Design',
             description: 'Creating intuitive and engaging user interfaces that provide seamless digital experiences.',
             color: 'from-primary-500 to-primary-700'
