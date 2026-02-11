@@ -4,6 +4,14 @@ import { Link } from 'react-router-dom';
 const Projects = () => {
     const projects = [
         {
+            id: 0,
+            title: 'HenCafe - Poultry Info',
+            category: 'Mobile App',
+            image: 'https://images.unsplash.com/photo-1516383274235-5f42d6c6426d?w=500&q=80',
+            description: 'A complete poultry marketplace app designed for farmers, sellers, and buyers. Real-time rates and expert guidance.',
+            link: '/products/hencafe'
+        },
+        {
             id: 1,
             title: 'E-Commerce Platform',
             category: 'Web Development',
@@ -72,7 +80,7 @@ const Projects = () => {
                                 <p className="text-sm text-gray-600 mb-6 leading-relaxed line-clamp-3 italic flex-grow">
                                     "{project.description}"
                                 </p>
-                                <Link to="/contact" className="inline-flex items-center text-sm font-black text-gray-900 group-hover:text-primary-600 transition-colors pt-4 border-t border-gray-50">
+                                <Link to={project.link || "/contact"} className="inline-flex items-center text-sm font-black text-gray-900 group-hover:text-primary-600 transition-colors pt-4 border-t border-gray-50">
                                     View Details <span className="ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-primary-600">→</span>
                                 </Link>
                             </div>

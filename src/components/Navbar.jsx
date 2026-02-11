@@ -16,14 +16,24 @@ const Navbar = () => {
 
     const navLinks = [
         { name: 'Home', href: '/' },
+        {
+            name: 'Products',
+            href: '#',
+            submenu: [
+                { name: 'HenCafe', href: '/products/hencafe' }
+            ]
+        },
         { name: 'Services', href: '/services' },
         { name: 'About', href: '/about' },
         { name: 'Projects', href: '/projects' },
         { name: 'Contact', href: '/contact' }
     ];
 
+    const [activeDropdown, setActiveDropdown] = useState(null);
+
     const handleLinkClick = () => {
         setIsMobileMenuOpen(false);
+        setActiveDropdown(null);
     };
 
     return (
@@ -40,13 +50,42 @@ const Navbar = () => {
                     <div className="hidden md:absolute md:inset-0 md:flex md:items-center md:justify-center">
                         <ul className="flex items-center space-x-10">
                             {navLinks.map((link, index) => (
-                                <li key={index}>
-                                    <Link
-                                        to={link.href}
-                                        className="font-bold text-gray-600 hover:text-primary-600 transition-colors text-sm tracking-wide"
-                                    >
-                                        {link.name}
-                                    </Link>
+                                <li key={index} className="relative group">
+                                    {link.submenu ? (
+                                        <>
+                                            <button
+                                                className="flex items-center gap-1 font-bold text-gray-600 hover:text-primary-600 transition-colors text-sm tracking-wide py-2"
+                                                onMouseEnter={() => setActiveDropdown(index)}
+                                            >
+                                                {link.name}
+                                                <svg className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === index ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                                </svg>
+                                            </button>
+                                            <div
+                                                className={`absolute left-0 mt-2 w-48 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 transition-all duration-300 ${activeDropdown === index ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
+                                                onMouseLeave={() => setActiveDropdown(null)}
+                                            >
+                                                {link.submenu.map((sub, idx) => (
+                                                    <Link
+                                                        key={idx}
+                                                        to={sub.href}
+                                                        className="block px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors"
+                                                        onClick={handleLinkClick}
+                                                    >
+                                                        {sub.name}
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <Link
+                                            to={link.href}
+                                            className="font-bold text-gray-600 hover:text-primary-600 transition-colors text-sm tracking-wide"
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    )}
                                 </li>
                             ))}
                         </ul>
@@ -78,18 +117,44 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Navigation */}
-                <div className={`md:hidden bg-white border-b border-gray-100 transition-all duration-500 overflow-hidden ${isMobileMenuOpen ? 'max-h-[500px] opacity-100 pointer-events-auto' : 'max-h-0 opacity-0 pointer-events-none'
+                <div className={`md:hidden bg-white border-b border-gray-100 transition-all duration-500 overflow-hidden ${isMobileMenuOpen ? 'max-h-[600px] opacity-100 pointer-events-auto' : 'max-h-0 opacity-0 pointer-events-none'
                     }`}>
                     <ul className="py-6 space-y-1">
                         {navLinks.map((link, index) => (
                             <li key={index}>
-                                <Link
-                                    to={link.href}
-                                    className="block px-4 py-3 text-gray-800 font-bold hover:bg-gray-50 hover:text-primary-600 rounded-xl transition-all"
-                                    onClick={handleLinkClick}
-                                >
-                                    {link.name}
-                                </Link>
+                                {link.submenu ? (
+                                    <div className="space-y-1">
+                                        <button
+                                            className="w-full flex items-center justify-between px-4 py-3 text-gray-800 font-bold hover:bg-gray-50 rounded-xl transition-all"
+                                            onClick={() => setActiveDropdown(activeDropdown === index ? null : index)}
+                                        >
+                                            {link.name}
+                                            <svg className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === index ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </button>
+                                        <div className={`pl-6 overflow-hidden transition-all duration-300 ${activeDropdown === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                            {link.submenu.map((sub, idx) => (
+                                                <Link
+                                                    key={idx}
+                                                    to={sub.href}
+                                                    className="block px-4 py-3 text-gray-600 font-semibold hover:text-primary-600 rounded-xl transition-all"
+                                                    onClick={handleLinkClick}
+                                                >
+                                                    {sub.name}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <Link
+                                        to={link.href}
+                                        className="block px-4 py-3 text-gray-800 font-bold hover:bg-gray-50 hover:text-primary-600 rounded-xl transition-all"
+                                        onClick={handleLinkClick}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                )}
                             </li>
                         ))}
                         <li className="px-4 pt-4 pb-2">

@@ -11,6 +11,8 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import HenCafe from './components/HenCafe';
+import HenCafeHome from './components/HenCafeHome';
 import './App.css';
 
 // Home page component
@@ -19,6 +21,7 @@ const HomePage = () => (
     <Hero />
     <ServicesOverview />
     <Projects />
+    <HenCafeHome />
     <About />
     <ServicesDetail />
     <HowWeWork />
@@ -39,6 +42,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/products/hencafe" element={<HenCafe />} />
         </Routes>
         <Footer />
       </div>
