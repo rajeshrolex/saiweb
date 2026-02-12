@@ -18,7 +18,19 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
+
+        const subject = encodeURIComponent(`Contact Request from ${formData.name}`);
+        const body = encodeURIComponent(
+            `Name: ${formData.name}\n` +
+            `Email: ${formData.email}\n\n` +
+            `Message:\n${formData.message}`
+        );
+
+        const mailtoLink = `mailto:csr.mf7@gmail.com?subject=${subject}&body=${body}`;
+
+        // Open the default mail client
+        window.location.href = mailtoLink;
+
         setSubmitted(true);
 
         setTimeout(() => {
