@@ -60,7 +60,12 @@ const Projects = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {projects.map((project, index) => (
-                        <div key={project.id} className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 animate-fade-in-up h-full" style={{ animationDelay: `${index * 0.1}s` }}>
+                        <Link
+                            key={project.id}
+                            to={project.link || "/contact"}
+                            className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 animate-fade-in-up h-full outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                            style={{ animationDelay: `${index * 0.1}s` }}
+                        >
                             <div className="relative aspect-[4/3] overflow-hidden">
                                 <img
                                     src={project.image}
@@ -80,11 +85,11 @@ const Projects = () => {
                                 <p className="text-sm text-gray-600 mb-6 leading-relaxed line-clamp-3 italic flex-grow">
                                     "{project.description}"
                                 </p>
-                                <Link to={project.link || "/contact"} className="inline-flex items-center text-sm font-black text-gray-900 group-hover:text-primary-600 transition-colors pt-4 border-t border-gray-50">
+                                <div className="inline-flex items-center text-sm font-black text-gray-900 group-hover:text-primary-600 transition-colors pt-4 border-t border-gray-50 mt-auto">
                                     View Details <span className="ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-primary-600">→</span>
-                                </Link>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

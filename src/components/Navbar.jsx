@@ -20,7 +20,10 @@ const Navbar = () => {
             name: 'Products',
             href: '#',
             submenu: [
-                { name: 'HenCafe', href: '/products/hencafe' }
+                { name: 'HenCafe App', href: '/products/hencafe' },
+                { name: 'Market Rates', href: '/products/hencafe#rates' },
+                { name: 'Marketplace', href: '/products/hencafe#marketplace' },
+                { name: 'Farming Expert', href: '/products/hencafe#expert' }
             ]
         },
         { name: 'Services', href: '/services' },
@@ -89,6 +92,7 @@ const Navbar = () => {
                                         <Link
                                             to={link.href}
                                             className="font-bold text-gray-600 hover:text-primary-600 transition-colors text-sm tracking-wide"
+                                            onClick={handleLinkClick}
                                         >
                                             {link.name}
                                         </Link>

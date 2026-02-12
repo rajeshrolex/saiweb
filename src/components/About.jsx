@@ -21,18 +21,21 @@ const About = () => {
                     </div>
 
                     <div className="flex-1 w-full animate-fade-in">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
-                            <div className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg border border-gray-100 transform hover:-translate-y-1 transition-transform">
-                                <div className="text-4xl font-bold text-primary-600 mb-2">100+</div>
-                                <div className="text-gray-600 font-medium">Projects Delivered</div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8">
+                            <div className="bg-white p-10 rounded-[2.5rem] shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-all duration-500 hover:shadow-primary-100 hover:border-primary-100 group">
+                                <div className="text-5xl font-black text-primary-600 mb-3 group-hover:scale-110 transition-all origin-left">100+</div>
+                                <div className="text-gray-500 font-bold uppercase tracking-widest text-sm">Projects Delivered</div>
+                                <div className="mt-6 h-1 w-0 bg-primary-500 group-hover:w-full transition-all duration-700"></div>
                             </div>
-                            <div className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg border border-gray-100 transform hover:-translate-y-1 transition-transform">
-                                <div className="text-4xl font-bold text-primary-600 mb-2">50+</div>
-                                <div className="text-gray-600 font-medium">Happy Clients</div>
+                            <div className="bg-white p-10 rounded-[2.5rem] shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-all duration-500 hover:shadow-indigo-100 hover:border-indigo-100 group">
+                                <div className="text-5xl font-black text-indigo-600 mb-3 group-hover:scale-110 transition-all origin-left">50+</div>
+                                <div className="text-gray-500 font-bold uppercase tracking-widest text-sm">Happy Clients</div>
+                                <div className="mt-6 h-1 w-0 bg-indigo-600 group-hover:w-full transition-all duration-700"></div>
                             </div>
-                            <div className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg border border-gray-100 transform hover:-translate-y-1 transition-transform">
-                                <div className="text-4xl font-bold text-primary-600 mb-2">5+</div>
-                                <div className="text-gray-600 font-medium">Years Experience</div>
+                            <div className="bg-white p-10 rounded-[2.5rem] shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-all duration-500 hover:shadow-blue-100 hover:border-blue-100 group">
+                                <div className="text-5xl font-black text-blue-600 mb-3 group-hover:scale-110 transition-all origin-left">5+</div>
+                                <div className="text-gray-500 font-bold uppercase tracking-widest text-sm">Years Experience</div>
+                                <div className="mt-6 h-1 w-0 bg-blue-600 group-hover:w-full transition-all duration-700"></div>
                             </div>
                         </div>
                     </div>

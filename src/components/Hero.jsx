@@ -48,16 +48,16 @@ const Hero = () => {
                         <p className="text-lg sm:text-xl text-gray-300 max-w-2xl">
                             We design and develop fast, secure, and scalable digital products — from websites to custom software — built for real business needs.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <div className="flex flex-col sm:flex-row gap-6">
                             <Link
                                 to="/contact"
-                                className="inline-flex items-center justify-center px-8 py-4 border border-transparent rounded-xl shadow-lg text-base font-semibold text-white bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-300 transform hover:scale-105"
+                                className="inline-flex items-center justify-center px-10 py-5 rounded-2xl shadow-xl text-lg font-black text-white bg-primary-600 hover:bg-primary-700 shadow-primary-500/20 hover:shadow-primary-500/40 transition-all duration-300 transform hover:-translate-y-1 active:scale-95"
                             >
                                 Get Started
                             </Link>
                             <Link
                                 to="/contact"
-                                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 rounded-xl shadow-sm text-base font-semibold text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300"
+                                className="inline-flex items-center justify-center px-10 py-5 border-2 border-white/20 rounded-2xl shadow-sm text-lg font-black text-white bg-white/5 backdrop-blur-md hover:bg-white/15 focus:outline-none transition-all duration-300 transform hover:-translate-y-1"
                             >
                                 Talk to Us
                             </Link>
@@ -65,27 +65,38 @@ const Hero = () => {
                     </div>
 
                     {/* Hero Visual */}
-                    <div className="relative hidden lg:block animate-fade-in">
-                        <div className="absolute top-10 left-10 w-48 h-32 bg-white/10 backdrop-blur-md rounded-2xl p-4 shadow-xl animate-float">
-                            <div className="space-y-2">
-                                <div className="h-2 bg-primary-400 rounded w-3/4"></div>
-                                <div className="h-2 bg-primary-300 rounded w-1/2"></div>
-                                <div className="h-2 bg-primary-400 rounded w-2/3"></div>
+                    <div className="relative hidden lg:block animate-fade-in group">
+                        <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500/20 rounded-full blur-[120px] -z-10 animate-pulse"></div>
+                        <div className="absolute top-10 left-10 w-56 h-40 glass rounded-3xl p-6 premium-shadow animate-float">
+                            <div className="space-y-3">
+                                <div className="h-2 bg-primary-500/40 rounded w-full"></div>
+                                <div className="h-2 bg-primary-400/30 rounded w-4/5"></div>
+                                <div className="h-2 bg-primary-500/40 rounded w-full"></div>
+                                <div className="mt-4 flex gap-2">
+                                    <div className="w-8 h-8 rounded-full bg-primary-500/20"></div>
+                                    <div className="w-8 h-8 rounded-full bg-indigo-500/20"></div>
+                                </div>
                             </div>
                         </div>
-                        <div className="absolute top-40 right-10 w-40 h-40 bg-white/10 backdrop-blur-md rounded-2xl p-4 shadow-xl animate-float" style={{ animationDelay: '1s' }}>
-                            <div className="grid grid-cols-2 gap-2">
-                                <div className="w-full h-12 bg-primary-500 rounded-lg"></div>
-                                <div className="w-full h-12 bg-primary-400 rounded-lg"></div>
-                                <div className="w-full h-12 bg-primary-400 rounded-lg"></div>
-                                <div className="w-full h-12 bg-primary-500 rounded-lg"></div>
+                        <div className="absolute top-48 right-0 w-64 h-64 glass-dark rounded-[3rem] p-8 premium-shadow animate-float" style={{ animationDelay: '1.5s' }}>
+                            <div className="h-full flex flex-col justify-between">
+                                <div className="space-y-4">
+                                    <div className="w-12 h-12 rounded-2xl bg-primary-500 flex items-center justify-center">
+                                        <div className="w-6 h-6 border-4 border-white rounded-full border-t-transparent animate-spin"></div>
+                                    </div>
+                                    <div className="h-2 bg-white/20 rounded w-full"></div>
+                                    <div className="h-2 bg-white/10 rounded w-3/4"></div>
+                                </div>
+                                <div className="text-white font-black text-2xl uppercase tracking-tighter italic">Innovation</div>
                             </div>
                         </div>
-                        <div className="absolute bottom-10 left-20 w-44 h-36 bg-white/10 backdrop-blur-md rounded-2xl p-4 shadow-xl animate-float" style={{ animationDelay: '2s' }}>
-                            <div className="flex items-end justify-around h-full gap-2">
-                                <div className="w-8 bg-primary-500 rounded-t" style={{ height: '60%' }}></div>
-                                <div className="w-8 bg-primary-400 rounded-t" style={{ height: '80%' }}></div>
-                                <div className="w-8 bg-primary-500 rounded-t" style={{ height: '40%' }}></div>
+                        <div className="absolute -bottom-10 left-32 w-48 h-48 glass rounded-[3rem] p-8 premium-shadow animate-float" style={{ animationDelay: '3s' }}>
+                            <div className="h-full flex flex-col items-center justify-center text-center space-y-4">
+                                <div className="text-4xl">🚀</div>
+                                <div className="h-1.5 w-full bg-primary-100/50 rounded-full overflow-hidden">
+                                    <div className="h-full bg-primary-500 w-3/4"></div>
+                                </div>
+                                <div className="text-[10px] font-black uppercase text-primary-600 tracking-widest">Growth Engine</div>
                             </div>
                         </div>
                     </div>
