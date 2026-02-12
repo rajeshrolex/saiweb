@@ -6,6 +6,7 @@ import ServicesOverview from './components/ServicesOverview';
 import Projects from './components/Projects';
 import About from './components/About';
 import ServicesDetail from './components/ServicesDetail';
+import ServicePage from './components/ServicePage';
 import HowWeWork from './components/HowWeWork';
 import WhyChooseUs from './components/WhyChooseUs';
 import Contact from './components/Contact';
@@ -23,7 +24,6 @@ const HomePage = () => (
     <Projects />
     <HenCafeHome />
     <About />
-    <ServicesDetail />
     <HowWeWork />
     <WhyChooseUs />
     <Contact />
@@ -34,11 +34,12 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-white">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesDetail />} />
+          <Route path="/services/:serviceId" element={<ServicePage />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

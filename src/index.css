@@ -76,7 +76,7 @@
 }
 
 .glass {
-  @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(31, 38, 135, 0.07)];
+  @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
 }
 
 .glass-dark {
@@ -88,7 +88,7 @@
 }
 
 .premium-shadow {
-  @apply shadow-[0_20px_50px_rgba(8, _112, _184, _0.1)];
+  @apply shadow-[0_20px_50px_rgba(8,112,184,0.1)];
 }
 
 @layer base {
