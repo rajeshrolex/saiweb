@@ -70,11 +70,11 @@ const HenCafeHome = () => {
                         <div className="lg:w-1/2 relative flex justify-center lg:justify-end">
                             <div className="relative w-64 lg:w-72 h-[500px] lg:h-[580px] bg-gray-900 rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden transform -rotate-6 hover:rotate-0 transition-all duration-700">
                                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-gray-800 rounded-b-2xl z-20"></div>
-                                <div className="h-full w-full overflow-hidden">
+                                <div className="h-full w-full bg-white flex items-center justify-center p-4">
                                     <img
                                         src="/hen cafe.jpeg"
                                         alt="HenCafe App"
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-auto object-contain rounded-2xl shadow-sm"
                                     />
                                 </div>
                             </div>

@@ -110,11 +110,11 @@ const HenCafe = () => {
                             <div className="relative z-10 transform lg:translate-x-12 rotate-3 hover:rotate-0 transition-all duration-1000">
                                 <div className="relative w-72 lg:w-80 h-[600px] glass-dark rounded-[3.5rem] border-[14px] border-white/5 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] overflow-hidden">
                                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-white/5 rounded-b-3xl z-20"></div>
-                                    <div className="h-full w-full overflow-hidden">
+                                    <div className="h-full w-full bg-white flex items-center justify-center p-8 lg:p-12">
                                         <img
                                             src="/hen cafe.jpeg"
                                             alt="HenCafe App Preview"
-                                            className="w-full h-full object-contain"
+                                            className="w-full h-auto object-contain rounded-[3rem]"
                                         />
                                     </div>
                                 </div>
