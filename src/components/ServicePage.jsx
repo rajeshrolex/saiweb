@@ -60,11 +60,22 @@ const ServicePage = () => {
                         </div>
                         <div className="lg:w-1/2 relative animate-fade-in-right">
                             <div className="aspect-[16/9] rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] border border-gray-100">
-                                <img
-                                    src={service.image}
-                                    alt={service.title}
-                                    className="w-full h-full object-cover"
-                                />
+                                {service.video ? (
+                                    <video
+                                        src={service.video}
+                                        className="w-full h-full object-cover"
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                    />
+                                ) : (
+                                    <img
+                                        src={service.image}
+                                        alt={service.title}
+                                        className="w-full h-full object-cover"
+                                    />
+                                )}
                             </div>
                             <div className={`absolute -bottom-8 -left-8 w-48 h-48 bg-gradient-to-br ${service.color} rounded-[3rem] -z-10 blur-3xl opacity-30 animate-pulse`}></div>
                         </div>
