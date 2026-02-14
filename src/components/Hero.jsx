@@ -68,18 +68,7 @@ const Hero = () => {
                     <div className="relative hidden lg:block animate-fade-in group">
                         <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500/20 rounded-full blur-[120px] -z-10 animate-pulse"></div>
 
-                        <div className="absolute top-48 right-0 w-64 h-64 glass-dark rounded-[3rem] p-8 premium-shadow animate-float" style={{ animationDelay: '1.5s' }}>
-                            <div className="h-full flex flex-col justify-between">
-                                <div className="space-y-4">
-                                    <div className="w-12 h-12 rounded-2xl bg-primary-500 flex items-center justify-center">
-                                        <div className="w-6 h-6 border-4 border-white rounded-full border-t-transparent animate-spin"></div>
-                                    </div>
-                                    <div className="h-2 bg-white/20 rounded w-full"></div>
-                                    <div className="h-2 bg-white/10 rounded w-3/4"></div>
-                                </div>
-                                <div className="text-white font-black text-2xl uppercase tracking-tighter italic">Innovation</div>
-                            </div>
-                        </div>
+
 
                     </div>
                 </div>
