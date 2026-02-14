@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { LinkedinIcon, TwitterIcon, GithubIcon, InstagramIcon } from './Icons';
 
 const Footer = () => {
+    const socialIcons = {
+        LinkedIn: <LinkedinIcon className="w-5 h-5" />,
+        Twitter: <TwitterIcon className="w-5 h-5" />,
+        GitHub: <GithubIcon className="w-5 h-5" />,
+        Instagram: <InstagramIcon className="w-5 h-5" />
+    };
+
     return (
         <footer className="bg-gray-950 text-white py-24 relative overflow-hidden">
             {/* Background elements */}
@@ -22,7 +30,9 @@ const Footer = () => {
                             {['LinkedIn', 'Twitter', 'GitHub', 'Instagram'].map((social) => (
                                 <a key={social} href="#" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary-600 hover:border-primary-600 transition-all group">
                                     <span className="text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity absolute -top-8 bg-primary-600 px-2 py-1 rounded">{social}</span>
-                                    <div className="w-5 h-5 bg-gray-500 group-hover:bg-white rounded-sm"></div>
+                                    <div className="text-gray-500 group-hover:text-white transition-colors">
+                                        {socialIcons[social]}
+                                    </div>
                                 </a>
                             ))}
                         </div>
