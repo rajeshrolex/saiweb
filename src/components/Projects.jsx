@@ -7,7 +7,7 @@ const Projects = () => {
             id: 0,
             title: 'HenCafe - Poultry Info',
             category: 'Mobile App',
-            image: 'https://images.unsplash.com/photo-1516383274235-5f42d6c6426d?w=500&q=80',
+            image: '/hen cafe.jpeg',
             description: 'A complete poultry marketplace app designed for farmers, sellers, and buyers. Real-time rates and expert guidance.',
             link: '/products/hencafe'
         },

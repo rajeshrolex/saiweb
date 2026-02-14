@@ -110,17 +110,12 @@ const HenCafe = () => {
                             <div className="relative z-10 transform lg:translate-x-12 rotate-3 hover:rotate-0 transition-all duration-1000">
                                 <div className="relative w-72 lg:w-80 h-[600px] glass-dark rounded-[3.5rem] border-[14px] border-white/5 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] overflow-hidden">
                                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-white/5 rounded-b-3xl z-20"></div>
-                                    <div className="h-full w-full bg-gradient-to-b from-primary-600/20 via-primary-950 to-black p-8 flex flex-col items-center justify-center text-center">
-                                        <div className="w-24 h-24 bg-white rounded-[2.5rem] mb-8 shadow-2xl flex items-center justify-center animate-bounce-slow">
-                                            <span className="text-4xl font-black bg-gradient-to-br from-primary-600 to-indigo-600 bg-clip-text text-transparent">HC</span>
-                                        </div>
-                                        <h3 className="text-3xl font-black text-white mb-3">HenCafe</h3>
-                                        <p className="text-primary-300 font-bold uppercase tracking-widest text-[10px]">Information Simplified</p>
-                                        <div className="mt-16 space-y-4 w-full px-4">
-                                            <div className="h-2 bg-white/10 rounded-full w-full"></div>
-                                            <div className="h-2 bg-white/10 rounded-full w-4/5"></div>
-                                            <div className="h-2 bg-white/10 rounded-full w-3/4"></div>
-                                        </div>
+                                    <div className="h-full w-full overflow-hidden">
+                                        <img
+                                            src="/hen cafe.jpeg"
+                                            alt="HenCafe App Preview"
+                                            className="w-full h-full object-contain"
+                                        />
                                     </div>
                                 </div>
                             </div>
