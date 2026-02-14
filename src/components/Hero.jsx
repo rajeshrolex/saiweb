@@ -67,17 +67,7 @@ const Hero = () => {
                     {/* Hero Visual */}
                     <div className="relative hidden lg:block animate-fade-in group">
                         <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500/20 rounded-full blur-[120px] -z-10 animate-pulse"></div>
-                        <div className="absolute top-10 left-10 w-56 h-40 glass rounded-3xl p-6 premium-shadow animate-float">
-                            <div className="space-y-3">
-                                <div className="h-2 bg-primary-500/40 rounded w-full"></div>
-                                <div className="h-2 bg-primary-400/30 rounded w-4/5"></div>
-                                <div className="h-2 bg-primary-500/40 rounded w-full"></div>
-                                <div className="mt-4 flex gap-2">
-                                    <div className="w-8 h-8 rounded-full bg-primary-500/20"></div>
-                                    <div className="w-8 h-8 rounded-full bg-indigo-500/20"></div>
-                                </div>
-                            </div>
-                        </div>
+
                         <div className="absolute top-48 right-0 w-64 h-64 glass-dark rounded-[3rem] p-8 premium-shadow animate-float" style={{ animationDelay: '1.5s' }}>
                             <div className="h-full flex flex-col justify-between">
                                 <div className="space-y-4">
@@ -90,15 +80,7 @@ const Hero = () => {
                                 <div className="text-white font-black text-2xl uppercase tracking-tighter italic">Innovation</div>
                             </div>
                         </div>
-                        <div className="absolute -bottom-10 left-32 w-48 h-48 glass rounded-[3rem] p-8 premium-shadow animate-float" style={{ animationDelay: '3s' }}>
-                            <div className="h-full flex flex-col items-center justify-center text-center space-y-4">
-                                <div className="text-4xl">🚀</div>
-                                <div className="h-1.5 w-full bg-primary-100/50 rounded-full overflow-hidden">
-                                    <div className="h-full bg-primary-500 w-3/4"></div>
-                                </div>
-                                <div className="text-[10px] font-black uppercase text-primary-600 tracking-widest">Growth Engine</div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
