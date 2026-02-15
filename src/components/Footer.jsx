@@ -20,9 +20,13 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
                     {/* Brand Section */}
                     <div className="space-y-8">
-                        <h3 className="text-3xl font-black tracking-tighter">
-                            SVP<span className="text-primary-500">farm's</span>
-                        </h3>
+                        <Link to="/" className="inline-block group">
+                            <img
+                                src="/SVP 1.png"
+                                alt="SVP FARM TECH"
+                                className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                            />
+                        </Link>
                         <p className="text-gray-400 leading-relaxed text-lg">
                             Pioneering digital excellence in the agriculture and poultry sector. Building products that matter.
                         </p>

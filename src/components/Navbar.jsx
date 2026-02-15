@@ -47,12 +47,9 @@ const Navbar = () => {
                     {/* Logo on the left */}
                     <Link to="/" className="flex items-center group z-10">
                         <img
-                            src="/logo.png"
+                            src="/SVP 1.png"
                             alt="SVP FARM TECH"
-                            className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                            onError={(e) => {
-                                e.target.src = '/logo.svg'; // Fallback to SVG if PNG is missing
-                            }}
+                            className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                         />
                     </Link>
 

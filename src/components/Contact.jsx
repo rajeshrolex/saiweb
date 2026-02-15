@@ -53,40 +53,53 @@ const Contact = () => {
                                 <span className="text-primary-600 italic">Extraordinary</span>
                             </h2>
                             <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
-                                Have an idea or need a reliable development partner? Reach out to us and let's discuss the right solution for your business.
+                                At SVP Farm Tech IT, we turn your project requirements into scalable digital reality. Our streamlined process ensures transparency and excellence at every step.
                             </p>
                         </div>
 
-                        <div className="space-y-8">
-                            <div className="flex items-center gap-6 group">
-                                <div className="w-14 h-14 bg-primary-50 rounded-2xl flex items-center justify-center text-2xl text-primary-600 group-hover:bg-primary-600 group-hover:text-white transition-all duration-300 shadow-sm">
-                                    📧
+                        <div className="space-y-6">
+                            {[
+                                {
+                                    label: "Email Us",
+                                    value: "csr.mf7@gmail.com",
+                                    icon: "📧",
+                                    color: "primary"
+                                },
+                                {
+                                    label: "Call Us",
+                                    value: "9885279787",
+                                    icon: (
+                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                    ),
+                                    color: "indigo"
+                                },
+                                {
+                                    label: "Visit Us",
+                                    value: "Nellore, Andhrapradesh, 524001",
+                                    icon: (
+                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                    ),
+                                    color: "blue"
+                                }
+                            ].map((item, idx) => (
+                                <div key={idx} className="flex items-center gap-6 p-6 rounded-[2rem] bg-gray-50/50 border border-gray-100 hover:border-primary-100 hover:bg-white hover:shadow-xl hover:shadow-primary-100/20 transition-all duration-500 group">
+                                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-3xl shadow-sm group-hover:scale-110 transition-transform duration-500 ring-1 ring-gray-100">
+                                        {typeof item.icon === 'string' ? item.icon : <span className="text-primary-600">{item.icon}</span>}
+                                    </div>
+                                    <div className="space-y-1">
+                                        <h4 className="text-xs font-black uppercase tracking-[0.2em] text-primary-600/60 font-poppins">
+                                            {item.label}
+                                        </h4>
+                                        <p className="text-sm font-bold text-gray-700 ml-1">
+                                            {item.value}
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="space-y-1">
-                                    <h4 className="text-sm font-bold uppercase tracking-widest text-gray-400">Email Us</h4>
-                                    <p className="text-lg font-black text-gray-900">csr.mf7@gmail.com</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center gap-6 p-6 rounded-2xl bg-gray-50 border border-transparent hover:border-gray-200 transition-all">
-                                <div className="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-primary-600">
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                                </div>
-                                <div className="space-y-1">
-                                    <h4 className="text-sm font-bold uppercase tracking-widest text-gray-400">Call Us</h4>
-                                    <p className="text-lg font-black text-gray-900">9885279787</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center gap-6 p-6 rounded-2xl bg-gray-50 border border-transparent hover:border-gray-200 transition-all">
-                                <div className="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center text-primary-600">
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                                </div>
-                                <div className="space-y-1">
-                                    <h4 className="text-sm font-bold uppercase tracking-widest text-gray-400">Visit Us</h4>
-                                    <p className="text-lg font-black text-gray-900">Nellore, Andhrapradesh, 524001</p>
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
 
