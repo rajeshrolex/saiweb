@@ -57,7 +57,7 @@ const HenCafe = () => {
             {/* Hero Section */}
             <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-40 bg-[#0A0F1E] overflow-hidden">
                 {/* Dynamic Background Elements */}
-                <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 z-0 bg-[#0c4a6e]">
                     <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-600/10 blur-[150px] rounded-full -mr-96 -mt-96"></div>
                     <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-600/10 blur-[120px] rounded-full -ml-48 -mb-48"></div>
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03]"></div>
@@ -298,8 +298,8 @@ const HenCafe = () => {
 
             {/* CTA Marketplace Section */}
             <section id="marketplace" className="py-32 lg:py-60 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="relative max-w-7xl mx-auto py-24 lg:py-40 px-12 lg:px-24 bg-black rounded-[5rem] overflow-hidden flex flex-col items-center text-center space-y-12">
+                <div className="container mx-auto px-4 ">
+                    <div className="relative max-w-7xl mx-auto py-24 lg:py-40 px-12 lg:px-24 bg-[#0c4a6e] rounded-[5rem] overflow-hidden flex flex-col items-center text-center  space-y-12">
                         {/* Dramatic BG elements */}
                         <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-primary-600/10 rounded-full blur-[150px] -mr-[400px] -mt-[400px]"></div>
                         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-600/5 rounded-full blur-[120px] -ml-[300px] -mb-[300px]"></div>
