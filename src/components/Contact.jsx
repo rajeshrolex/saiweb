@@ -26,7 +26,7 @@ const Contact = () => {
             `Message:\n${formData.message}`
         );
 
-        const mailtoLink = `mailto:csr.mf7@gmail.com?subject=${subject}&body=${body}`;
+        const mailtoLink = `mailto:metamatrixmedia.com?subject=${subject}&body=${body}`;
 
         // Open the default mail client
         window.location.href = mailtoLink;
@@ -49,11 +49,11 @@ const Contact = () => {
                     <div className="space-y-10 animate-fade-in-up">
                         <div className="space-y-6">
                             <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
-                                Let's Build Something <br />
-                                <span className="text-primary-600 italic">Extraordinary</span>
+                                Ready to Dominate <br />
+                                <span className="text-primary-600 uppercase tracking-tighter">Your Market?</span>
                             </h2>
-                            <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
-                                At SVP Farm Tech IT, we turn your project requirements into scalable digital reality. Our streamlined process ensures transparency and excellence at every step.
+                            <p className="text-xl text-gray-600 leading-relaxed max-w-xl font-medium">
+                                At Meta Matrix Media, we turn brands into digital empires. Our elite team is ready to engineer your growth strategy today.
                             </p>
                         </div>
 
@@ -61,28 +61,20 @@ const Contact = () => {
                             {[
                                 {
                                     label: "Email Us",
-                                    value: "csr.mf7@gmail.com",
-                                    icon: "📧",
+                                    value: "metamatrixmedia.com",
+                                    icon: "✉️",
                                     color: "primary"
                                 },
                                 {
                                     label: "Call Us",
-                                    value: "9885279787",
-                                    icon: (
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                    ),
+                                    value: "+91 7675017264",
+                                    icon: "📞",
                                     color: "indigo"
                                 },
                                 {
                                     label: "Visit Us",
-                                    value: "Nellore, Andhrapradesh, 524001",
-                                    icon: (
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        </svg>
-                                    ),
+                                    value: "Hyderabad, India",
+                                    icon: "📍",
                                     color: "blue"
                                 }
                             ].map((item, idx) => (

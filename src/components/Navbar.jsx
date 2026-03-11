@@ -45,12 +45,13 @@ const Navbar = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
                 <div className="flex items-center justify-between h-full relative">
                     {/* Logo on the left */}
-                    <Link to="/" className="flex items-center group z-10">
-                        <img
-                            src="/SVP 1.png"
-                            alt="SVP FARM TECH"
-                            className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                        />
+                    <Link to="/" className="flex items-center gap-2 group z-10">
+                        <div className="w-10 h-10 rounded-xl bg-primary-600 flex items-center justify-center shadow-lg shadow-primary-200 group-hover:scale-105 transition-transform duration-300">
+                            <span className="font-bold text-white text-xl">M</span>
+                        </div>
+                        <span className="font-black text-xl tracking-tight text-gray-900">
+                            MetaMatrix<span className="text-primary-600">.</span>
+                        </span>
                     </Link>
 
                     {/* Centered Desktop Navigation */}

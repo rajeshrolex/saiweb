@@ -20,25 +20,24 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
                     {/* Brand Section */}
                     <div className="space-y-8">
-                        <Link to="/" className="inline-block group">
-                            <img
-                                src="/SVP 1.png"
-                                alt="SVP FARM TECH"
-                                className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                            />
+                        <Link to="/" className="flex items-center gap-2 mb-6 group">
+                            <div className="w-10 h-10 rounded-xl bg-primary-600 flex items-center justify-center shadow-lg shadow-primary-200 group-hover:scale-105 transition-transform duration-300">
+                                <span className="font-bold text-white text-xl">M</span>
+                            </div>
+                            <span className="font-black text-2xl tracking-tight text-white">
+                                MetaMatrix<span className="text-primary-500">.</span>
+                            </span>
                         </Link>
-                        <p className="text-gray-400 leading-relaxed text-lg">
-                            Pioneering digital excellence in the agriculture and poultry sector. Building products that matter.
+                        <p className="text-gray-400 leading-relaxed text-lg font-medium">
+                            The elite digital marketing agency engineered to dominate algorithms, capture audiences, and scale brands to the next echelon.
                         </p>
                         <div className="flex gap-4">
-                            {['LinkedIn', 'Twitter', 'GitHub', 'Instagram'].map((social) => (
-                                <a key={social} href="#" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary-600 hover:border-primary-600 transition-all group">
-                                    <span className="text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity absolute -top-8 bg-primary-600 px-2 py-1 rounded">{social}</span>
-                                    <div className="text-gray-500 group-hover:text-white transition-colors">
-                                        {socialIcons[social]}
-                                    </div>
-                                </a>
-                            ))}
+                            <a href="https://www.instagram.com/meta_matrix_media?igsh=dnZqdW1wa3dlcWFp" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary-600 hover:border-primary-600 transition-all group">
+                                <span className="text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity absolute -top-8 bg-primary-600 px-2 py-1 rounded">Instagram</span>
+                                <div className="text-gray-500 group-hover:text-white transition-colors">
+                                    <InstagramIcon className="w-5 h-5" />
+                                </div>
+                            </a>
                         </div>
                     </div>
 
@@ -61,43 +60,27 @@ const Footer = () => {
                     <div>
                         <h4 className="text-xl font-bold mb-10 text-white">Reach Us</h4>
                         <ul className="space-y-8">
-                            <li className="flex gap-4">
+                            <li className="flex gap-4 font-medium">
                                 <span className="text-primary-500 text-xl">📍</span>
-                                <span className="text-gray-400 leading-tight">Nellore, Andhrapradesh, 524001</span>
+                                <span className="text-gray-400 leading-tight">Hyderabad, India</span>
                             </li>
-                            <li className="flex gap-4">
+                            <li className="flex gap-4 font-medium">
                                 <span className="text-primary-500 text-xl">📞</span>
-                                <span className="text-gray-400">9885279787</span>
+                                <span className="text-gray-400">+91 7675017264</span>
                             </li>
-                            <li className="flex gap-4">
+                            <li className="flex gap-4 font-medium">
                                 <span className="text-primary-500 text-xl">✉️</span>
-                                <span className="text-gray-400">csr.mf7@gmail.com</span>
+                                <span className="text-gray-400">metamatrixmedia.com</span>
                             </li>
                         </ul>
                     </div>
 
-                    {/* Mobile App */}
-                    <div className="space-y-8">
-                        <h4 className="text-xl font-bold text-white">Our App</h4>
-                        <p className="text-gray-400">Manage your farm on the go with our flagship mobile application.</p>
-                        <a
-                            href="https://play.google.com/store/apps/details?id=com.svpfarms.hencafe&pcampaignid=web_share"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-4 bg-white/5 border border-white/10 p-4 rounded-2xl hover:bg-white/10 transition-all group"
-                        >
-                            <div className="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">📱</div>
-                            <div>
-                                <div className="text-[10px] uppercase font-bold text-gray-400">Get it on</div>
-                                <div className="text-lg font-black tracking-tight">Google Play</div>
-                            </div>
-                        </a>
-                    </div>
+
                 </div>
 
                 {/* Bottom Bar */}
                 <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
-                    <p className="text-gray-500 font-medium">© 2026 SVPfarm's. Engineered for Agriculture.</p>
+                        <p className="text-gray-500 font-medium">© 2026 Meta Matrix Media. Elevating Digital Brands.</p>
                     <div className="flex gap-10 text-sm font-bold text-gray-500">
                         <a href="#" className="hover:text-primary-400 transition-colors">Privacy Policy</a>
                         <a href="#" className="hover:text-primary-400 transition-colors">Terms of Service</a>

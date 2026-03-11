@@ -56,14 +56,14 @@ const About = () => {
                             Empowering Innovation
                         </div>
                         <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-[1.1]">
-                            Crafting Digital <span className="text-primary-600">Excellence</span>
+                            Engineering <span className="text-primary-600">Growth</span> & Authority
                         </h2>
                         <div className="space-y-4">
-                            <p className="text-xl font-medium text-gray-700 leading-relaxed">
-                                SVP Farm Tech IT is dedicated to transforming visionary ideas into high-performance digital solutions.
+                            <p className="text-xl font-bold text-gray-700 leading-relaxed">
+                                Meta Matrix Media is dedicated to transforming brands into digital powerhouses through relentless strategy and elite execution.
                             </p>
-                            <p className="text-lg text-gray-600 leading-relaxed">
-                                We specialize in custom software development, cloud-native architectures, and user-centric designs. Our focus remains steadfast on clean code, efficient delivery, and creating long-term value for our global clientele.
+                            <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                                Based in Hyderabad, India, we specialize in comprehensive digital marketing, premium web development, and AI-powered content creation. Our focus is on driving measurable ROI and building community around your brand.
                             </p>
                         </div>
                     </div>
@@ -138,10 +138,10 @@ const About = () => {
                             </p>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 {[
-                                    { title: "Web Solutions", desc: "Enterprise-grade web applications." },
-                                    { title: "Mobile Apps", desc: "Seamless iOS & Android experiences." },
-                                    { title: "Cloud Systems", desc: "Secure & scalable infrastructure." },
-                                    { title: "UI/UX Design", desc: "Intuitive & engaging interfaces." }
+                                    { title: "Meta & Google Ads", desc: "ROI-focused performance marketing." },
+                                    { title: "SEO Strategy", desc: "Dominating search rankings." },
+                                    { title: "SMM & Content", desc: "Building community & authority." },
+                                    { title: "Web Design", desc: "High-converting digital experiences." }
                                 ].map((service, i) => (
                                     <div key={i} className="flex items-start gap-4">
                                         <div className="mt-1 w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
@@ -183,9 +183,9 @@ const About = () => {
 
                 {/* Final CTA/Vision Statement */}
                 <div className="text-center max-w-3xl mx-auto py-12">
-                    <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">Let's Build Something <span className="text-primary-600">Great Together</span></h3>
-                    <p className="text-lg text-gray-600 leading-relaxed mb-10">
-                        Whether you're a startup looking to launch your first MVP or an established enterprise seeking digital transformation, SVP Farm Tech IT is your trusted partner.
+                    <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-6 font-poppins">Ready to <span className="text-primary-600">Scale Your Brand?</span></h3>
+                    <p className="text-lg text-gray-600 leading-relaxed mb-10 font-medium">
+                        Whether you're launching a new venture or looking to dominate your current market, Meta Matrix Media is your trusted growth partner.
                     </p>
                     <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white font-bold rounded-2xl hover:bg-primary-700 transition-all shadow-lg hover:shadow-primary-200 hover:-translate-y-1">
                         Start Your Project

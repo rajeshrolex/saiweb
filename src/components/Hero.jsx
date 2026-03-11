@@ -39,14 +39,14 @@ const Hero = () => {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Hero Text */}
                     <div className="text-white space-y-6 animate-fade-in-up">
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                            Web, App & Software Development That{' '}
-                            <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
-                                Grows Your Business
+                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">
+                            Elevate Your Digital Presence With{' '}
+                            <span className="text-primary-500">
+                                Meta Matrix Media
                             </span>
                         </h1>
-                        <p className="text-lg sm:text-xl text-gray-300 max-w-2xl">
-                            We design and develop fast, secure, and scalable digital products — from websites to custom software — built for real business needs.
+                        <p className="text-lg sm:text-xl text-gray-300 max-w-2xl font-medium">
+                            Your premium growth partner. From high-converting websites to AI-driven marketing strategies that scale brands to the next echelon.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-6">
                             <Link

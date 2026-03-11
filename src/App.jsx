@@ -12,20 +12,15 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import HenCafe from './components/HenCafe';
-import HenCafeHome from './components/HenCafeHome';
 import './App.css';
 
 // Home page component
 const HomePage = () => (
   <>
     <Hero />
+    <About />
     <ServicesOverview />
     <Projects />
-    <HenCafeHome />
-    <About />
-    <HowWeWork />
-    <WhyChooseUs />
     <Contact />
   </>
 );
@@ -38,12 +33,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/services" element={<ServicesDetail />} />
-          <Route path="/services/:serviceId" element={<ServicePage />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/services" element={<ServicesOverview />} />
+          <Route path="/portfolio" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/products/hencafe" element={<HenCafe />} />
         </Routes>
         <Footer />
       </div>
